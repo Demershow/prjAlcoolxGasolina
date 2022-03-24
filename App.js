@@ -13,12 +13,12 @@ export default function App() {
   function dividir(){
     setResultado (parseFloat(valor1) / parseFloat(valor2));
 
-    if(resultado < 0.7){
-      setResposta("Abasteça com álcool");
+    if(resultado <= 0.7){
+       setResposta("Abasteça com álcool");
     }else{
       setResposta("Abasteça com gasolina");
     }
-  }
+  } 
 
   return (
     <View style={styles.container}>
