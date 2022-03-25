@@ -23,6 +23,8 @@ export default function App() {
     }
   } 
 
+  //faltando a mascara
+  
   return (
     <View style={styles.container}>
       <Text style={styles.texto}>Álcool, ou gasolina?</Text>
