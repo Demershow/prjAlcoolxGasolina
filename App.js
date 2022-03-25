@@ -32,6 +32,7 @@ export default function App() {
       <View style={styles.bloco}>
         <Text style={styles.textoBloco}>Valor do litro do alcool</Text>
         <TextInput 
+          maxLength={4}
           style={styles.input}
           keyboardType="numeric"
           value={valor1}
@@ -41,6 +42,7 @@ export default function App() {
       <View style={styles.bloco}>
         <Text style={styles.textoBloco}>Valor do litro da gasolina</Text>
         <TextInput 
+          maxLength={4}
           style={styles.input}
           keyboardType="numeric"
           value={valor2}
