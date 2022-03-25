@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 import { React, useState } from 'react';
 
+
 export default function App() {
   const[valor1, setValor1] = useState();
   const[valor2, setValor2] = useState();
@@ -8,12 +9,14 @@ export default function App() {
   const[resposta, setResposta] = useState();
 
 
-
+  
+  
 
   function dividir(){
-    setResultado (parseFloat(valor1) / parseFloat(valor2));
+   let diferenca = (parseFloat(valor1) / parseFloat(valor2));
+   setResultado (diferenca.toFixed(2));
 
-    if(resultado <= 0.7){
+    if(diferenca <= 0.70){
        setResposta("Abasteça com álcool");
     }else{
       setResposta("Abasteça com gasolina");
@@ -49,8 +52,8 @@ export default function App() {
             <Text style={styles.textoBotao}>Dividir</Text>
         </TouchableOpacity>
       </View>
-      <View style={styles.bloco}>
-            <Text style={styles.textoBloco}>Resultado: {resultado} - {resposta}</Text>
+      <View style={styles.textoResultado}>
+            <Text style={styles.textoBloco}>Resultado: {resultado} {resposta}</Text>
       </View>
     </View>
   );
@@ -78,6 +81,12 @@ const styles = StyleSheet.create({
     width:'80%'
   },
   bloco:{
+    width:'100%',
+    alignItems:'center',
+    marginTop:30
+  },
+  textoResultado:{
+    marginLeft:`03%`,
     width:'100%',
     alignItems:'center',
     marginTop:30
