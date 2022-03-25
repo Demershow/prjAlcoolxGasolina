@@ -24,6 +24,7 @@ export default function App() {
   } 
 
   //faltando a mascara
+  //uhasuhsabuhdsaubhdsauhbdasubhdasubhdasubhad
   
   return (
     <View style={styles.container}>
